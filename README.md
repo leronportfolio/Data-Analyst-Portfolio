@@ -72,3 +72,31 @@ Welcome to my Data Analyst Portfolio! This repository contains a collection of S
 ### ContinentsHighestDeathCount
 - This view presents continents with the highest death count.
 - It provides insights into the severity of the pandemic on a continental
+- 
+
+# Cleaning Data in SQL Queries
+
+This repository contains a collection of SQL queries for cleaning and transforming data in the "PortfolioProject.dbo.NashvilleHousing" table. The provided SQL queries address various data cleaning tasks, including standardizing date formats, populating missing values, splitting address columns, replacing values, removing duplicates, and deleting unused columns. Below is a summary of each task along with the corresponding SQL query.
+
+## Standardize Date Format
+The query aims to standardize the date format in the "SaleDate" column of the table. It converts the "SaleDate" column to the date data type using the CONVERT function.
+
+## Populate Property Address Data
+The query identifies records with missing values in the "PropertyAddress" column and populates them by matching the "ParcelID" with non-null "PropertyAddress" values in other records.
+
+## Breaking out Address into Individual Columns (Address, City, State)
+This query splits the "PropertyAddress" column into separate columns for address, city, and state, creating new columns "PropertySplitAddress" and "PropertySplitCity" in the table.
+
+## Splitting Owner Address into Individual Columns (Address, City, State)
+The query splits the "OwnerAddress" column into separate columns for owner address, city, and state, creating new columns "OwnerSplitAddress," "OwnerSplitCity," and "OwnerSplitState" in the table.
+
+## Change "Y" and "N" to "Yes" and "No" in "Sold as Vacant" field
+The query converts the values in the "SoldAsVacant" column from "Y" to "Yes" and from "N" to "No" for improved readability.
+
+## Remove Duplicates
+This query removes duplicate records from the table based on specific columns ("ParcelID," "PropertyAddress," "SalePrice," "SaleDate," and "LegalReference").
+
+## Delete Unused Columns
+The query deletes unused columns ("OwnerAddress," "TaxDistrict," "PropertyAddress," and "SaleDate") from the table.
+
+Please note that you should adjust the table and column names as per your specific database setup.
